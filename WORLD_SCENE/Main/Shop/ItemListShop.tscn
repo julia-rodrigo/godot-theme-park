@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/DefaultButton.tres" type="StyleBox" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/panelStyles/InnerPanel.tres" type="StyleBox" id=2]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/PressedButton.tres" type="StyleBox" id=3]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/disabledButton.tres" type="StyleBox" id=4]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/HoverButton.tres" type="StyleBox" id=5]
+[ext_resource path="res://WORLD_SCENE/Main/import/googleFonts/Poppins/Poppins-Medium.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://WORLD_SCENE/Main/import/googleFonts/Poppins/Poppins-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://WORLD_SCENE/Main/Shop/ItemListShop.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="container" type="MarginContainer"]
+margin_right = 320.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 40 )
+script = ExtResource( 8 )
+
+[node name="item" type="HBoxContainer" parent="."]
+margin_right = 320.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 320, 60 )
+
+[node name="name" type="Button" parent="item"]
+margin_right = 230.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 230, 40 )
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 1 )
+text = "Apple"
+expand_icon = true
+
+[node name="details" type="Panel" parent="item"]
+margin_left = 234.0
+margin_right = 320.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 70, 40 )
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 2 )
+
+[node name="info" type="Label" parent="item/details"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "3"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="item/name" to="." method="_on_name_pressed"]

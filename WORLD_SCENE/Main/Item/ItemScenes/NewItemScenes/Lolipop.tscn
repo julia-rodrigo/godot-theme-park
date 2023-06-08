@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/lolipop.tscn" type="PackedScene" id=1]
+
+[node name="Lolipop" type="Spatial"]
+
+[node name="lolipop" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.17178, 0, 0, 0, 2.53771, 0, 0, 0, 3.31534, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.964248, -0.0355524, 0.262605, 0, 0.99096, 0.134159, -0.265001, -0.129363, 0.955531, 0.39504, 0.350685, 1.76055 )

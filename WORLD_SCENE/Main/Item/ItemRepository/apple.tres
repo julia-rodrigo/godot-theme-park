@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/Class/Item.gd" type="Script" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/Apple.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Bright Red Apple"
+amount = 1
+buying_cost = 3
+selling_cost = 2
+sprite = ExtResource( 2 )
+description = "A small healthy treat that will brighten your day"
+stackable = true
+max_stack_size = 99

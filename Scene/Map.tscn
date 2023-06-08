@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scene/WaterPlane.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/Dirt.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Pier.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/IceCreamStand.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Ferris Wheel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/FishandChipStand.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/MarketStand .tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Hammer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://default_env.tres" type="Environment" id=9]
+
+[node name="Map" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -37.3483, 0 )
+
+[node name="WaterPlane" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10000, 0, 0, 0, 1, 0, 0, 0, 10000, 0.26484, 15.6615, -0.0840995 )
+
+[node name="Dirt" parent="." instance=ExtResource( 2 )]
+transform = Transform( 10000, 0, 0, 0, 0.099, 0, 0, 0, 10000, 1.36472, -280.882, 0.611907 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 9 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( 1, 0, 0, 0, 0.351074, 0.936348, 0, -0.936348, 0.351074, 0, 929.929, 109996 )
+directional_shadow_mode = 1
+
+[node name="Pier" parent="." instance=ExtResource( 3 )]
+transform = Transform( -121.307, 1.89504, 0, -0.939824, -60.1603, 0, 0, 0, 97.1875, -11.1255, 58.3456, -37.3901 )
+
+[node name="FishandChipStand" parent="." instance=ExtResource( 6 )]
+transform = Transform( 73.1332, 1.28533, 97.7886, -0.278737, 130.943, -2.26116, -90.9461, 0.75647, 65.4474, -867.3, 63.6696, 399.954 )
+
+[node name="MarketStand (1)" parent="." instance=ExtResource( 7 )]
+transform = Transform( -77.5632, 0, 4.25644, 0, 114.433, 0, -2.08069, 0, -142.575, -795.985, 50.207, -804.294 )
+
+[node name="Hammer" parent="." instance=ExtResource( 8 )]
+transform = Transform( -11.0724, 0, 0.0791696, 0, 9.48897, 0, 0.802458, 0, -5.36488, 770.919, 66.3818, -522.316 )
+
+[node name="IceCreamStand" parent="." instance=ExtResource( 4 )]
+transform = Transform( 94.8328, 0, 160.189, 0, 154.841, 0, -152.688, 0, 99.4919, 661.381, 63.8743, -1556.1 )
+
+[node name="Ferris Wheel" parent="." instance=ExtResource( 5 )]
+transform = Transform( 26.8632, -5.7398, -457.514, -0.932324, 437.979, -7.56312, 441.403, 0.544422, 17.238, 32.0997, 64.2578, 1054.45 )

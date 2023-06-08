@@ -1,0 +1,735 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Delete/Creature2DSprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Menu/Help.gd" type="Script" id=2]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/yellowtextboxStyle/DeafultYellowTextBox.tres" type="StyleBox" id=3]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/panelStyles/InnerPanel.tres" type="StyleBox" id=4]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/disabledButton.tres" type="StyleBox" id=5]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/HoverButton.tres" type="StyleBox" id=6]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/DefaultButton.tres" type="StyleBox" id=7]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/PressedButton.tres" type="StyleBox" id=8]
+[ext_resource path="res://WORLD_SCENE/Main/import/googleFonts/Poppins/Poppins-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://WORLD_SCENE/Main/import/googleFonts/Poppins/Poppins-Medium.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Menu/ItemPanel/ItemPanel.gd" type="Script" id=11]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Menu/PhotoPanel/PictureList.gd" type="Script" id=12]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Menu/PhotoPanel/MoneyContainer.gd" type="Script" id=13]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/MiniCoffeeShop.tscn" type="PackedScene" id=14]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Menu/ItemViewer/ItemViewerTexture.gd" type="Script" id=15]
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.87451, 0.823529, 0.266667, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.760784, 0.572549, 0.0117647, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="DynamicFont" id=13]
+size = 20
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 23
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=25]
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.223529, 0.2, 0.2, 0.901961 )
+
+[sub_resource type="Environment" id=30]
+ambient_light_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="World" id=32]
+environment = SubResource( 30 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 17
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 17
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 17
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 17
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.223529, 0.2, 0.2, 0.901961 )
+
+[node name="Help" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Options" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="TopMarginContainer" type="MarginContainer" parent="Options"]
+anchor_right = 1.0
+margin_bottom = 98.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 20
+
+[node name="SideMarginContainer" type="MarginContainer" parent="Options/TopMarginContainer"]
+margin_top = 20.0
+margin_right = 1024.0
+margin_bottom = 98.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 60
+custom_constants/margin_left = 60
+
+[node name="ButtonOptions" type="HBoxContainer" parent="Options/TopMarginContainer/SideMarginContainer"]
+margin_left = 60.0
+margin_right = 964.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 15
+alignment = 1
+
+[node name="Button1" type="HBoxContainer" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions"]
+margin_right = 291.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button1"]
+margin_right = 291.0
+margin_bottom = 78.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ItemButton" type="Button" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button1/MarginContainer"]
+margin_right = 291.0
+margin_bottom = 78.0
+focus_mode = 0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 7 )
+text = "A: Items"
+
+[node name="Button5" type="HBoxContainer" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions"]
+margin_left = 306.0
+margin_right = 597.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button5"]
+margin_right = 291.0
+margin_bottom = 78.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PhotoButton" type="Button" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button5/MarginContainer"]
+margin_right = 291.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 7 )
+text = "S: Photo"
+
+[node name="Button4" type="HBoxContainer" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions"]
+margin_left = 612.0
+margin_right = 904.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button4"]
+margin_right = 292.0
+margin_bottom = 78.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TakePhotoButton" type="Button" parent="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button4/MarginContainer"]
+margin_right = 292.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 7 )
+text = "P: Take a Photo"
+
+[node name="SavingPanel" type="Panel" parent="Options"]
+visible = false
+margin_left = 343.0
+margin_top = 125.0
+margin_right = 701.0
+margin_bottom = 241.0
+custom_styles/panel = SubResource( 12 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/SavingPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 29.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Options/SavingPanel/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 338.0
+margin_bottom = 125.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Saved your position :)"
+autowrap = true
+
+[node name="TextBox" type="Panel" parent="Options"]
+visible = false
+margin_left = 367.0
+margin_top = 221.0
+margin_right = 782.0
+margin_bottom = 321.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Options/TextBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Options/TextBox/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 395.0
+margin_bottom = 91.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "hey! xD You're not suppose to see me!!!"
+autowrap = true
+
+[node name="fillSizeFlags" type="MarginContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 7
+custom_constants/margin_right = 60
+custom_constants/margin_top = 150
+custom_constants/margin_left = 60
+custom_constants/margin_bottom = 100
+
+[node name="marginBottomAndFillOnly" type="MarginContainer" parent="fillSizeFlags"]
+margin_left = 60.0
+margin_top = 150.0
+margin_right = 964.0
+margin_bottom = 500.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ItemPanel" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly"]
+visible = false
+margin_right = 904.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 0, 300 )
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 3 )
+script = ExtResource( 11 )
+
+[node name="outerMargin" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="innerVbox" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 884.0
+margin_bottom = 330.0
+custom_constants/separation = 15
+
+[node name="TopHbox" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox"]
+margin_right = 864.0
+margin_bottom = 40.0
+size_flags_horizontal = 7
+
+[node name="Label" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/TopHbox"]
+margin_right = 225.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 225, 40 )
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Items [A]"
+
+[node name="Description" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/TopHbox"]
+margin_left = 229.0
+margin_right = 720.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 450, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 4 )
+
+[node name="info" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/TopHbox/Description"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 18 )
+text = "Select an item to view it. "
+align = 1
+valign = 1
+
+[node name="MoneyContainer" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/TopHbox"]
+margin_left = 724.0
+margin_right = 864.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+
+[node name="margin" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/TopHbox/MoneyContainer"]
+margin_right = 140.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 20
+
+[node name="money" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/TopHbox/MoneyContainer/margin"]
+margin_right = 120.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 120, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "200"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="ContentMargin" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox"]
+margin_top = 55.0
+margin_right = 864.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 8
+custom_constants/margin_left = 8
+
+[node name="SeparateMargin" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin"]
+margin_left = 8.0
+margin_right = 856.0
+margin_bottom = 255.0
+custom_constants/separation = 10
+
+[node name="Body" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin"]
+margin_right = 848.0
+margin_bottom = 255.0
+size_flags_vertical = 3
+
+[node name="ScrollLeft" type="ScrollContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body"]
+margin_right = 259.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 218, 0 )
+size_flags_horizontal = 5
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="ItemList" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft"]
+margin_right = 259.0
+margin_bottom = 40.0
+custom_constants/separation = 4
+
+[node name="container" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList"]
+margin_right = 259.0
+margin_bottom = 40.0
+custom_constants/margin_right = 5
+
+[node name="item" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container"]
+margin_right = 254.0
+margin_bottom = 40.0
+
+[node name="name" type="Button" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container/item"]
+margin_right = 150.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 150, 40 )
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 25 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 7 )
+text = "Apple"
+expand_icon = true
+
+[node name="details" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container/item"]
+margin_left = 154.0
+margin_right = 254.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 4 )
+
+[node name="info" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container/item/details"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 18 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body"]
+margin_left = 263.0
+margin_right = 848.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+follow_focus = true
+scroll_vertical_enabled = false
+
+[node name="ItemList" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer"]
+margin_right = 585.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item1" type="Button" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList"]
+margin_right = 290.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 206, 169 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+
+[node name="inner" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 13
+custom_constants/margin_top = 10
+custom_constants/margin_left = 13
+custom_constants/margin_bottom = 10
+
+[node name="Content" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner"]
+margin_left = 13.0
+margin_top = 10.0
+margin_right = 277.0
+margin_bottom = 245.0
+
+[node name="Panel" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content"]
+margin_right = 264.0
+margin_bottom = 235.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 31 )
+
+[node name="TextureRect" type="TextureRect" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content/Panel"]
+margin_right = 180.0
+script = ExtResource( 15 )
+
+[node name="Viewport" type="Viewport" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content/Panel"]
+size = Vector2( 450, 450 )
+own_world = true
+world = SubResource( 32 )
+transparent_bg = true
+render_target_v_flip = true
+
+[node name="MiniCoffeeShop" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content/Panel/Viewport" instance=ExtResource( 14 )]
+
+[node name="information" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList"]
+margin_left = 294.0
+margin_right = 585.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+
+[node name="panel" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information"]
+margin_right = 291.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 200, 40 )
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 4 )
+
+[node name="container" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="tags" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 281.0
+margin_bottom = 245.0
+
+[node name="name" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_right = 271.0
+margin_bottom = 24.0
+size_flags_horizontal = 5
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 23 )
+text = "Photo one"
+uppercase = true
+
+[node name="cost" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_top = 28.0
+margin_right = 271.0
+margin_bottom = 52.0
+size_flags_horizontal = 5
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 29 )
+text = "Cost: $ 20.00"
+
+[node name="description" type="RichTextLabel" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_top = 56.0
+margin_right = 271.0
+margin_bottom = 181.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 21 )
+text = "This is an interesting description about the item"
+scroll_active = false
+
+[node name="delete" type="Button" parent="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_top = 185.0
+margin_right = 271.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 26 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 7 )
+text = "Get rid of this pls"
+
+[node name="PhotoPanel" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly"]
+visible = false
+margin_right = 904.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 0, 300 )
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 3 )
+
+[node name="outerMargin" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="innerVbox" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 884.0
+margin_bottom = 330.0
+custom_constants/separation = 15
+
+[node name="TopHbox" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox"]
+margin_right = 864.0
+margin_bottom = 40.0
+size_flags_horizontal = 7
+
+[node name="Label" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/TopHbox"]
+margin_right = 225.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 225, 40 )
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Photo [S]"
+
+[node name="Description" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/TopHbox"]
+margin_left = 229.0
+margin_right = 720.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 450, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 4 )
+
+[node name="info" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/TopHbox/Description"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 18 )
+text = "Press 'P' for new photos. You can sell them for $52.00"
+align = 1
+valign = 1
+
+[node name="MoneyContainer" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/TopHbox"]
+margin_left = 724.0
+margin_right = 864.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+
+[node name="margin" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/TopHbox/MoneyContainer"]
+margin_right = 140.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 20
+
+[node name="money" type="Label" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/TopHbox/MoneyContainer/margin"]
+margin_right = 120.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 120, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "200"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="ContentMargin" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox"]
+margin_top = 55.0
+margin_right = 864.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 8
+custom_constants/margin_left = 8
+
+[node name="SeparateMargin" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin"]
+margin_left = 8.0
+margin_right = 856.0
+margin_bottom = 255.0
+custom_constants/separation = 10
+
+[node name="Body" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin"]
+margin_right = 848.0
+margin_bottom = 255.0
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body"]
+margin_right = 848.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+follow_focus = true
+scroll_vertical_enabled = false
+
+[node name="PictureList" type="HBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer"]
+margin_right = 848.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 12 )
+
+[node name="Photo" type="Button" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/PictureList"]
+margin_right = 206.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 206, 169 )
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+
+[node name="inner" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/PictureList/Photo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 13
+custom_constants/margin_top = 10
+custom_constants/margin_left = 13
+custom_constants/margin_bottom = 10
+
+[node name="Content" type="VBoxContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/PictureList/Photo/inner"]
+margin_left = 13.0
+margin_top = 10.0
+margin_right = 193.0
+margin_bottom = 245.0
+
+[node name="Button" type="Button" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/PictureList/Photo/inner/Content"]
+margin_right = 180.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 26 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 8 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 7 )
+text = "Delete"
+
+[node name="Image" type="MarginContainer" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/PictureList/Photo/inner/Content"]
+margin_top = 23.0
+margin_right = 180.0
+margin_bottom = 235.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/PictureList/Photo/inner/Content/Image"]
+margin_right = 180.0
+margin_bottom = 212.0
+custom_styles/panel = SubResource( 24 )
+
+[node name="Image" parent="fillSizeFlags/marginBottomAndFillOnly/PhotoPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/PictureList/Photo/inner/Content/Image" instance=ExtResource( 1 )]
+position = Vector2( 79, 55 )
+
+[connection signal="pressed" from="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button1/MarginContainer/ItemButton" to="." method="_on_ItemButton_pressed"]
+[connection signal="pressed" from="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button5/MarginContainer/PhotoButton" to="." method="_on_PhotoButton_pressed"]
+[connection signal="pressed" from="Options/TopMarginContainer/SideMarginContainer/ButtonOptions/Button4/MarginContainer/TakePhotoButton" to="." method="_on_TakePhotoButton_pressed"]
+[connection signal="pressed" from="fillSizeFlags/marginBottomAndFillOnly/ItemPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags/delete" to="fillSizeFlags/marginBottomAndFillOnly/ItemPanel" method="_on_delete_pressed"]

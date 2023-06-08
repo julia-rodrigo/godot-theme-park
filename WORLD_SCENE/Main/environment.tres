@@ -1,0 +1,28 @@
+[gd_resource type="Environment" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/import/HDR/kloofendal_48d_partly_cloudy_puresky_1k (1).exr" type="Texture" id=1]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 1 )
+
+[resource]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_color = Color( 0.384314, 0.384314, 0.384314, 1 )
+background_energy = 2.3
+ambient_light_color = Color( 0.741176, 0.603922, 0.831373, 1 )
+ambient_light_energy = 2.0
+ambient_light_sky_contribution = 0.35
+tonemap_exposure = 0.63
+tonemap_white = 1.51
+auto_exposure_scale = 2.24
+auto_exposure_min_luma = 0.0
+auto_exposure_max_luma = 7.17
+auto_exposure_speed = 64.0
+ss_reflections_enabled = true
+ss_reflections_depth_tolerance = 0.1
+ssao_enabled = true
+ssao_radius = 4.49
+ssao_intensity2 = 0.0
+ssao_color = Color( 0.788235, 0.447059, 0.00392157, 1 )
+dof_blur_far_distance = 7.09

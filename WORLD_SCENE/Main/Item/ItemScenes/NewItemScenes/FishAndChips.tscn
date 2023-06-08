@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/FishandChips.tscn" type="PackedScene" id=1]
+
+[node name="FishAndChips" type="Spatial"]
+
+[node name="FishandChips" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.9583, -0.174424, 1.26383, 0.49695, 1.70186, -0.290908, -1.00574, 0.674718, 1.06048, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.591644, 1.78268 )

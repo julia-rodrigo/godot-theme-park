@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Objects/Buildings/CoffeeShop.tscn" type="PackedScene" id=1]
+
+[node name="MiniCoffeeShop" type="Spatial"]
+
+[node name="CoffeeShop" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.718855, -0.103681, 0.687385, -0.0345915, 0.982255, 0.184333, -0.694299, -0.156286, 0.702512, 0.571751, 0.165954, 0.567504 )

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/choclate bar.tscn" type="PackedScene" id=1]
+
+[node name="ChocoBar" type="Spatial"]
+
+[node name="choclate bar" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.939693, -0.34202, 1.49502e-08, 0, -4.37114e-08, -1, 0.34202, 0.939693, -4.10753e-08, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.316954, 2.59213 )

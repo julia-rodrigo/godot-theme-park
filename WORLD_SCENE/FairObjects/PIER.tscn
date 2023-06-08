@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Glb files/Pier .glb/pier.gltf" type="PackedScene" id=1]
+
+[node name="pier" instance=ExtResource( 1 )]

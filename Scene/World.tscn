@@ -1,0 +1,112 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scene/lolipop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/FishandChips.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/rubix.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/choclate bar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Pier.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Ferris Wheel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/WaterPlane.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/FishandChipStand.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/IceCreamStandprop.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Dirt.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/RollerCoaster.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/IceCreamStand.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scene/Hammer.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scene/fence1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scene/MarketStand .tscn" type="PackedScene" id=15]
+[ext_resource path="res://WORLD_SCENE/Main/environment.tres" type="Environment" id=16]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Spatial
+
+
+func _ready():
+	var anim = get_node(\"AnimationPlayer\").get_animation(\"Cylinder001Action\")
+	anim.set_loop(true)
+	get_node(\"AnimationPlayer\").play(\"Cylinder001Action\")
+"
+
+[node name="World" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -37.3483, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 16 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( -0.901304, -0.093653, -0.422941, 0.432152, -0.261814, -0.862959, -0.0299132, -0.960564, 0.276446, 5212.68, 4804.77, -1861.21 )
+light_energy = 0.936
+light_indirect_energy = 11.541
+light_specular = 1.821
+directional_shadow_mode = 0
+
+[node name="Pier" parent="." instance=ExtResource( 5 )]
+transform = Transform( -387.467, 6.05295, 0, -1.7737, -113.539, 0, 0, 0, 144.761, -11.1255, 58.3456, -37.3901 )
+
+[node name="fence1" parent="Pier" instance=ExtResource( 14 )]
+transform = Transform( -5.18599, -0.0454539, 0, 0.0810156, -2.90964, 0, 0, 0, 1.6536, -1.10282, -0.147771, 17.132 )
+
+[node name="fence2" parent="Pier" instance=ExtResource( 14 )]
+transform = Transform( -0.0611853, -0.0454539, 1.3244, 0.000955837, -2.90964, -0.0206897, 5.16443, 0, 0.0155627, -9.61894, -0.0694171, -13.8578 )
+
+[node name="fence4" parent="Pier" instance=ExtResource( 14 )]
+transform = Transform( -0.00429994, -0.0454539, 1.32345, 6.71736e-05, -2.90964, -0.0206749, 3.70656, -1.58179e-09, -0.134548, -12.8079, -0.0195987, 7.90928 )
+
+[node name="fence5" parent="Pier" instance=ExtResource( 14 )]
+transform = Transform( -0.0217693, -0.0454539, 1.32398, 0.00034008, -2.90964, -0.0206832, 3.70612, -3.75247e-10, -0.0898283, 10.6349, -0.385823, 7.90929 )
+
+[node name="fence3" parent="Pier" instance=ExtResource( 14 )]
+transform = Transform( -0.0611853, -0.0454539, 1.3244, 0.000955837, -2.90964, -0.0206897, 5.16443, 0, 0.0155627, 7.58067, -0.338109, -13.8578 )
+
+[node name="FishandChipStand" parent="." instance=ExtResource( 8 )]
+transform = Transform( 131.022, 0.102974, 0.459567, -0.477989, 224.546, -3.87753, 17.3079, 2.63174, 208.028, -2344.4, 63.6696, -2794.19 )
+
+[node name="FishandChips" parent="FishandChipStand" instance=ExtResource( 2 )]
+transform = Transform( 2.29768, -0.000808149, -0.00561379, 0.00158957, 1.08948, 0.0275191, -0.191187, -0.0137157, 1.59431, 1.70152, 1.56143, 0.66162 )
+
+[node name="FishandChips2" parent="FishandChipStand" instance=ExtResource( 2 )]
+transform = Transform( 2.29768, -0.000808149, -0.00561379, 0.00158957, 1.08948, 0.0275191, -0.191187, -0.0137157, 1.59431, 1.70531, 1.54284, -0.41524 )
+
+[node name="FishandChips3" parent="FishandChipStand" instance=ExtResource( 2 )]
+transform = Transform( 2.29768, -0.000808149, -0.00561379, 0.00158957, 1.08948, 0.0275191, -0.191187, -0.0137157, 1.59431, 1.70892, 1.52517, -1.43922 )
+
+[node name="SweetStand" parent="." instance=ExtResource( 15 )]
+transform = Transform( -52.7906, 0, -151.102, 0, 168.149, 0, 56.9032, 0, -135.428, -1858.33, 50.207, -1269.82 )
+
+[node name="rubix" parent="SweetStand" instance=ExtResource( 3 )]
+transform = Transform( -2.20315, 0, -0.04976, 0, 1.52005, 0, 0.0321521, 0, -0.906754, -0.0604324, -6.57447, 4.13572 )
+
+[node name="lolipop" parent="SweetStand" instance=ExtResource( 1 )]
+transform = Transform( -0.212087, 0, 5.32746, 0, 2.88583, 0, -3.18134, 0, -0.0869272, -2.08836, 2.47466, 1.81506 )
+
+[node name="lolipop2" parent="SweetStand" instance=ExtResource( 1 )]
+transform = Transform( -0.212087, 0, 5.32746, 0, 2.88583, 0, -3.18134, 0, -0.0869272, -1.82104, 2.47466, 0.986108 )
+
+[node name="lolipop3" parent="SweetStand" instance=ExtResource( 1 )]
+transform = Transform( -0.212087, 0, 5.32746, 0, 2.88583, 0, -3.18134, 0, -0.0869272, -1.80862, 2.47466, -0.0208235 )
+
+[node name="IceCreamStand" parent="." instance=ExtResource( 12 )]
+transform = Transform( -92.3312, 0, 360.788, 0, 389.026, 0, -465.152, 0, 41.1593, 1751.84, 63.8743, -2783.53 )
+
+[node name="IceCreamStandprop" parent="IceCreamStand" instance=ExtResource( 9 )]
+transform = Transform( 0.00439301, 0, -0.0847443, 0, 0.122634, 0, 0.146246, 0, 0.00231265, -0.0256748, 0.321676, 0.259114 )
+
+[node name="Ferris Wheel" parent="." instance=ExtResource( 6 )]
+transform = Transform( 820.817, -12.215, -1048.21, -2.6791, 1258.57, -19.4109, 1307.24, 9.6954, 658.142, 2426.83, 64.2578, 734.6 )
+
+[node name="Hammer" parent="." instance=ExtResource( 13 )]
+transform = Transform( -14.553, 0, -1.81195e-06, 0, 17.16, 0, 2.19744e-06, 0, -12, 2273.53, 95, -1179.42 )
+script = SubResource( 1 )
+
+[node name="RollerCoaster" parent="." instance=ExtResource( 11 )]
+transform = Transform( -20.3847, 0, -3.02809e-06, 0, 30.921, 0, 1.27288e-06, 0, -24.7401, -2946.63, 77.3483, 1962.49 )
+
+[node name="choclate bar" parent="." instance=ExtResource( 4 )]
+transform = Transform( 199.64, 0, 37.8206, 0, 128.004, 0, -195.488, 0, 38.6238, -1729.89, 388.976, -1221.94 )
+
+[node name="WaterPlane" parent="." instance=ExtResource( 7 )]
+transform = Transform( 10000, -1.86265e-08, 0, 1.52588e-05, 1, 0, 0, 0, 9999.99, 0.264842, -103.361, -0.0841255 )
+
+[node name="Dirt" parent="WaterPlane" instance=ExtResource( 10 )]
+transform = Transform( 1, 1.84402e-13, 0, -1.14441e-05, 0.099, 0, 0, 0, 1, 0.000109987, -507.153, 6.96022e-05 )
+skeleton = NodePath("../..")

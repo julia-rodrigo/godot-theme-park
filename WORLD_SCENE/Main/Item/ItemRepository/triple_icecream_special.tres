@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/Class/Item.gd" type="Script" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/NewItemScenes/TripleIceCreamSpecial.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "TrippleSpecial Limited Edition"
+amount = 3
+buying_cost = 12
+selling_cost = 15
+sprite = ExtResource( 2 )
+description = "A 3 hit combo taste in the disguise of a beautiful treat! Buy yours now. Mmm."
+stackable = true
+max_stack_size = 12

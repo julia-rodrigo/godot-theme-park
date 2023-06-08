@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/Class/Item.gd" type="Script" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/NewItemScenes/SberryIceCream.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Sberry Icecream"
+amount = 1
+buying_cost = 5
+selling_cost = 4
+sprite = ExtResource( 2 )
+description = "Made with the finest ingredients money can buy with strawberries picked from the county of Wexford."
+stackable = true
+max_stack_size = 99

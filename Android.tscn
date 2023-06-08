@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://WORLD_SCENE/PlayerLocomotion/LocoRuby/Ruby.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/environment.tres" type="Environment" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 10, 0.5, 10 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.0745098, 0.831373, 0.866667, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 5.80317, 0.263403, 6.24744 )
+
+[node name="Android" type="Spatial"]
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+mesh = SubResource( 3 )
+material = SubResource( 4 )
+
+[node name="StaticBody" type="StaticBody" parent="CSGMesh"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CSGMesh/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="Ruby" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.541499, -0.022294 )
+collision_layer = 2
+
+[node name="OmniLight" type="OmniLight" parent="Ruby"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+light_energy = 4.693
+light_indirect_energy = 2.761
+light_specular = 0.486
+shadow_color = Color( 1, 0.980392, 0.980392, 1 )
+omni_range = 1.09808
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 2 )

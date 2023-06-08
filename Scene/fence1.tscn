@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Glb files/Pier .glb/fence1.glb" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 1, 0.465374 )
+
+[node name="fence1" instance=ExtResource( 1 )]
+
+[node name="StaticBody" type="StaticBody" parent="Fence" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Fence/StaticBody" index="0"]
+transform = Transform( 5.78574, 0, 0, 0, 5.22266, 0, 0, 0, 6.05202, 0, 0, 0 )
+shape = SubResource( 1 )

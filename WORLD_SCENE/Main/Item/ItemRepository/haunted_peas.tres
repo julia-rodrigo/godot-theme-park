@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/Class/Item.gd" type="Script" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/NewItemScenes/HauntedPeas.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Demon's Haunted Peas"
+amount = 1
+buying_cost = 18
+selling_cost = 18
+sprite = ExtResource( 2 )
+description = "Grown just down the road the freshest mushy peas in all the demon's land. A must try!"
+stackable = true
+max_stack_size = 5

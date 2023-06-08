@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Glb files/NewItems/MushyPeas/MushyPeas.glb" type="PackedScene" id=1]
+
+[node name="HauntedPeas" type="Spatial"]
+
+[node name="MushyPeas" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.797068, 0.60389, 0, -0.60389, 0.797068, 0, 1.05087, 1.81588 )

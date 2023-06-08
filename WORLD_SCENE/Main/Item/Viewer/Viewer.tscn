@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/MiniCoffeeShop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/Viewer/Viewer.gd" type="Script" id=2]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/Apple.tscn" type="PackedScene" id=3]
+
+[node name="Viewer" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.820626, -0.132582, 0.555873, 0.0414245, 0.983957, 0.17353, -0.569962, -0.119376, 0.812953, 0.380882, 0.251048, 0.68859 )
+
+[node name="MiniCoffeeShop" parent="." instance=ExtResource( 1 )]
+
+[node name="Spatial" parent="." instance=ExtResource( 3 )]
+visible = false

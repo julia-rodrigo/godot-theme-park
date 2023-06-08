@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/Class/Item.gd" type="Script" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/NewItemScenes/Lolipop.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Multicoloured Lolipop"
+amount = 1
+buying_cost = 72
+selling_cost = 20
+sprite = ExtResource( 2 )
+description = "An S Rare lolipop imported from Mars. Just kidding! Its from Pluto. Ultra Rare!"
+stackable = true
+max_stack_size = 10

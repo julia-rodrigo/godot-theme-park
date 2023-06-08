@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Glb files/NewItems/IceCreamStickChoc/ICECreamStickChoc.glb" type="PackedScene" id=1]
+
+[node name="IceCreamStickChoc" type="Spatial"]
+
+[node name="ICECreamStickChoc" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.868951, -0.0848407, 0.487572, 0, 0.985196, 0.171431, -0.494898, -0.148965, 0.856087, 1.0354, 0.403942, 2.13981 )

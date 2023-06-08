@@ -1,0 +1,442 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/import/player/idel/ruby idel front left.png" type="Texture" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/idel/Ruby idle backview corner left.png" type="Texture" id=2]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/run/ruby run frontleft.png" type="Texture" id=3]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/idel/Ruby idle NW back.png" type="Texture" id=4]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/run/ruby run frontright.png" type="Texture" id=5]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/idel/ruby idel front right.png" type="Texture" id=6]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/NPC/NPC.gd" type="Script" id=7]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/idel/Ruby idel front.png" type="Texture" id=8]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/idel/Ruby idel back.png" type="Texture" id=10]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/run/Ruby run front.png" type="Texture" id=12]
+[ext_resource path="res://WORLD_SCENE/Main/import/player/run/Ruby run back.png" type="Texture" id=13]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/NPC/NPCInteractions/ConversationArea.tscn" type="PackedScene" id=14]
+
+[sub_resource type="Animation" id=13]
+resource_name = "Idel_Back"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("IdelBack:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "Idel_BackLeft"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("IdelBackLeft:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Idel_BackRight"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("IdelBackRight:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Idel_Front"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("IdelFront:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Idel_Left"
+length = 1.2
+loop = true
+
+[sub_resource type="Animation" id=16]
+resource_name = "Idel_Right"
+length = 1.2
+loop = true
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idel_frontLeft"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("IdelFrontRight:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Idel_frontRight"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("IdelFrontLeft:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("IdelFrontRight:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IdelBack:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 10 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RunFrontRight:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "Run_Back"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("RunBack:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "Run_Front"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("RunFront:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Run_FrontLeft"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("RunFrontRight:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Run_FrontRight"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("RunFrontLeft:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="CapsuleShape" id=48]
+radius = 0.156426
+height = 0.131946
+
+[sub_resource type="CapsuleShape" id=9]
+
+[sub_resource type="AnimationNodeBlend2" id=38]
+
+[sub_resource type="AnimationNodeBlend2" id=23]
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "Run_FrontLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "Run_FrontRight"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=37]
+blend_point_0/node = SubResource( 35 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 36 )
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id=39]
+animation = "Idel_frontLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=40]
+animation = "Idel_frontRight"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=41]
+blend_point_0/node = SubResource( 39 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 40 )
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeBlend2" id=44]
+
+[sub_resource type="AnimationNodeAnimation" id=45]
+animation = "Run_Back"
+
+[sub_resource type="AnimationNodeAnimation" id=46]
+animation = "Run_Front"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=47]
+blend_point_0/node = SubResource( 45 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 46 )
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "Idel_Back"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "Idel_Front"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=30]
+blend_point_0/node = SubResource( 28 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 29 )
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeBlendTree" id=22]
+graph_offset = Vector2( -121.461, 0 )
+nodes/Blend2/node = SubResource( 38 )
+nodes/Blend2/position = Vector2( 520, 40 )
+nodes/Idel/node = SubResource( 23 )
+nodes/Idel/position = Vector2( 240, -40 )
+"nodes/Left and Right/node" = SubResource( 41 )
+"nodes/Left and Right/position" = Vector2( -20, 60 )
+"nodes/Left and Right 2/node" = SubResource( 37 )
+"nodes/Left and Right 2/position" = Vector2( 0, 220 )
+nodes/Run/node = SubResource( 44 )
+nodes/Run/position = Vector2( 260, 240 )
+"nodes/Up and Down/node" = SubResource( 30 )
+"nodes/Up and Down/position" = Vector2( -20, -80 )
+"nodes/Up and Down 2/node" = SubResource( 47 )
+"nodes/Up and Down 2/position" = Vector2( 0, 360 )
+nodes/output/position = Vector2( 820, 40 )
+node_connections = [ "Idel", 0, "Up and Down", "Idel", 1, "Left and Right", "Blend2", 0, "Idel", "Blend2", 1, "Run", "Run", 0, "Left and Right 2", "Run", 1, "Up and Down 2", "output", 0, "Blend2" ]
+
+[node name="NPC" type="KinematicBody"]
+collision_layer = 2
+script = ExtResource( 7 )
+
+[node name="IdelFrontLeft" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 6 )
+hframes = 4
+vframes = 3
+frame = 7
+
+[node name="IdelBackLeft" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="IdelBackRight" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 4 )
+hframes = 4
+vframes = 3
+frame = 6
+
+[node name="IdelFrontRight" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 1 )
+hframes = 4
+vframes = 3
+
+[node name="IdelBack" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 10 )
+hframes = 4
+vframes = 3
+frame = 7
+
+[node name="IdelFront" type="Sprite3D" parent="."]
+transform = Transform( 0.999999, 0.00141372, 2.56885e-12, -0.00141372, 0.999999, 3.58403e-09, 2.56885e-12, -3.58403e-09, 1, 0, 0, 0 )
+visible = false
+alpha_cut = 2
+texture = ExtResource( 8 )
+hframes = 4
+vframes = 3
+frame = 7
+
+[node name="RunFrontRight" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 3 )
+hframes = 3
+vframes = 4
+
+[node name="RunFrontLeft" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 5 )
+hframes = 4
+vframes = 3
+frame = 7
+
+[node name="RunFront" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 12 )
+hframes = 4
+vframes = 3
+frame = 7
+
+[node name="RunBack" type="Sprite3D" parent="."]
+visible = false
+alpha_cut = 2
+texture = ExtResource( 13 )
+hframes = 4
+vframes = 3
+frame = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idel_Back = SubResource( 13 )
+anims/Idel_BackLeft = SubResource( 1 )
+anims/Idel_BackRight = SubResource( 2 )
+anims/Idel_Front = SubResource( 14 )
+anims/Idel_Left = SubResource( 15 )
+anims/Idel_Right = SubResource( 16 )
+anims/Idel_frontLeft = SubResource( 3 )
+anims/Idel_frontRight = SubResource( 4 )
+anims/RESET = SubResource( 5 )
+anims/Run_Back = SubResource( 43 )
+anims/Run_Front = SubResource( 42 )
+anims/Run_FrontLeft = SubResource( 6 )
+anims/Run_FrontRight = SubResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 4.37114e-08, -4.37114e-08, 1.91069e-15, 1, 0, -1, 1.91069e-15, -0.00699857, 0.0100708, -0.000106812 )
+shape = SubResource( 48 )
+
+[node name="SpringArm" type="SpringArm" parent="."]
+transform = Transform( 1, -0.000174533, 0, 0.000174533, 1, 0, 0, 0, 1, 0, 0.10804, 0 )
+visible = false
+shape = SubResource( 9 )
+spring_length = 6.0
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 22 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/Blend2/blend_amount = 0.5
+parameters/Idel/blend_amount = 0.5
+"parameters/Left and Right/blend_position" = 0
+"parameters/Left and Right 2/blend_position" = 0
+parameters/Run/blend_amount = 0.5
+"parameters/Up and Down/blend_position" = 0
+"parameters/Up and Down 2/blend_position" = 0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[node name="ConversationArea" parent="." instance=ExtResource( 14 )]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="ConversationArea" to="." method="_on_ConversationArea_body_entered"]
+[connection signal="body_exited" from="ConversationArea" to="." method="_on_ConversationArea_body_exited"]

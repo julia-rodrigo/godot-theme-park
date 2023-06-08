@@ -1,0 +1,55 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://WORLD_SCENE/Main/Resource/Inventory/Inventory.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://WORLD_SCENE/Main/Item/Class/Item.gd"
+}, {
+"base": "Resource",
+"class": "PhotoLog",
+"language": "GDScript",
+"path": "res://WORLD_SCENE/Main/Resource/PhotoLog/PhotoLog.gd"
+} ]
+_global_script_class_icons={
+"Inventory": "",
+"Item": "",
+"PhotoLog": ""
+}
+
+[application]
+
+config/name="Vr Game Godot 3 . 5"
+run/main_scene="res://HalfWorldMap.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://WORLD_SCENE/Main/AutoLoad/Global.gd"
+ItemDatabase="*res://WORLD_SCENE/Main/AutoLoad/ItemDatabase.gd"
+Player="*res://WORLD_SCENE/Main/AutoLoad/Player.gd"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

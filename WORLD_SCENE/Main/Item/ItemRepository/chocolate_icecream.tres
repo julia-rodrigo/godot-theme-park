@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/Class/Item.gd" type="Script" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/NewItemScenes/ChocolateIceCream.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Chocolate Icecream"
+amount = 1
+buying_cost = 5
+selling_cost = 4
+sprite = ExtResource( 2 )
+description = "100% Irish dairy gone in to this ice cream. Will cool you down in seconds with a test from home."
+stackable = true
+max_stack_size = 99

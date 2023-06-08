@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/Item/Class/Item.gd" type="Script" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/NewItemScenes/ChocoBar.tscn" type="PackedScene" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "One Piece Chocoba"
+amount = 1
+buying_cost = 5
+selling_cost = 4
+sprite = ExtResource( 2 )
+description = "You can never get enough of this sweet mouthwatering treat on a summers day. Chocolate! Mmm "
+stackable = true
+max_stack_size = 100

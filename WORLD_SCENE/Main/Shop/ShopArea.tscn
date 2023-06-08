@@ -1,0 +1,531 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://WORLD_SCENE/Main/import/googleFonts/Poppins/Poppins-Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://WORLD_SCENE/Main/Item/ItemScenes/MiniCoffeeShop.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/yellowtextboxStyle/DeafultYellowTextBox.tres" type="StyleBox" id=3]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/panelStyles/InnerPanel.tres" type="StyleBox" id=4]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/PressedButton.tres" type="StyleBox" id=5]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/DefaultButton.tres" type="StyleBox" id=6]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/disabledButton.tres" type="StyleBox" id=7]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Interactions/ButtonStyles/HoverButton.tres" type="StyleBox" id=8]
+[ext_resource path="res://WORLD_SCENE/Main/import/googleFonts/Poppins/Poppins-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Menu/ItemViewer/ItemViewerTexture.gd" type="Script" id=10]
+[ext_resource path="res://WORLD_SCENE/Main/import/googleFonts/Poppins/Poppins-Bold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://WORLD_SCENE/Main/From_Ruby/Menu/PhotoPanel/MoneyContainer.gd" type="Script" id=12]
+[ext_resource path="res://WORLD_SCENE/Main/Shop/ShopArea.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 17
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.223529, 0.2, 0.2, 0.901961 )
+
+[sub_resource type="Environment" id=33]
+ambient_light_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="World" id=32]
+environment = SubResource( 33 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 13
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 13
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 15
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 23
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 20
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "IDEL"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../inner/list/continue:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 115 ), Vector2( 0, 120 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../inner/list/continue:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 126 ) ]
+}
+
+[node name="ShopArea" type="CanvasLayer"]
+script = ExtResource( 13 )
+
+[node name="fillSizeFlags" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 60
+custom_constants/margin_top = 120
+custom_constants/margin_left = 60
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="fillSizeFlags"]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 964.0
+margin_bottom = 594.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="marginBottomAndFillOnly" type="MarginContainer" parent="fillSizeFlags/VBoxContainer"]
+margin_right = 904.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 904, 200 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ShopPanel" type="Panel" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly"]
+margin_right = 904.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 904, 300 )
+rect_clip_content = true
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 3 )
+
+[node name="outerMargin" type="MarginContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="innerVbox" type="VBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 884.0
+margin_bottom = 280.0
+custom_constants/separation = 15
+
+[node name="TopHbox" type="HBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox"]
+margin_right = 864.0
+margin_bottom = 40.0
+size_flags_horizontal = 7
+
+[node name="ShopName" type="Label" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/TopHbox"]
+margin_right = 225.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 225, 40 )
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "The Food Shop"
+
+[node name="Finished" type="Button" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/TopHbox"]
+margin_left = 229.0
+margin_right = 540.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 150, 40 )
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 6 )
+text = "Finished Shopping"
+expand_icon = true
+
+[node name="MoneyContainer" type="HBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/TopHbox"]
+margin_left = 544.0
+margin_right = 864.0
+margin_bottom = 40.0
+script = ExtResource( 12 )
+
+[node name="margin" type="MarginContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/TopHbox/MoneyContainer"]
+margin_right = 320.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 20
+
+[node name="money" type="Label" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/TopHbox/MoneyContainer/margin"]
+margin_right = 300.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 300, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "$ 200"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="ContentMargin" type="MarginContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox"]
+margin_top = 55.0
+margin_right = 864.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 8
+custom_constants/margin_left = 8
+
+[node name="SeparateMargin" type="VBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin"]
+margin_left = 8.0
+margin_right = 856.0
+margin_bottom = 205.0
+custom_constants/separation = 10
+
+[node name="Body" type="HBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin"]
+margin_right = 848.0
+margin_bottom = 205.0
+size_flags_vertical = 3
+
+[node name="ScrollLeft" type="ScrollContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body"]
+margin_right = 259.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 218, 0 )
+size_flags_horizontal = 5
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="ItemList" type="VBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft"]
+margin_right = 259.0
+margin_bottom = 40.0
+custom_constants/separation = 4
+
+[node name="container" type="MarginContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList"]
+margin_right = 259.0
+margin_bottom = 40.0
+custom_constants/margin_right = 5
+
+[node name="item" type="HBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container"]
+margin_right = 254.0
+margin_bottom = 40.0
+
+[node name="name" type="Button" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container/item"]
+margin_right = 150.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 150, 40 )
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 6 )
+text = "Apple"
+expand_icon = true
+
+[node name="details" type="Panel" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container/item"]
+margin_left = 154.0
+margin_right = 254.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 4 )
+
+[node name="info" type="Label" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollLeft/ItemList/container/item/details"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body"]
+margin_left = 263.0
+margin_right = 848.0
+margin_bottom = 205.0
+size_flags_horizontal = 3
+follow_focus = true
+scroll_vertical_enabled = false
+
+[node name="ItemList" type="HBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer"]
+margin_right = 585.0
+margin_bottom = 205.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Item1" type="Button" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList"]
+margin_right = 290.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 206, 169 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+
+[node name="inner" type="MarginContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 13
+custom_constants/margin_top = 10
+custom_constants/margin_left = 13
+custom_constants/margin_bottom = 10
+
+[node name="Content" type="VBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner"]
+margin_left = 13.0
+margin_top = 10.0
+margin_right = 277.0
+margin_bottom = 195.0
+
+[node name="Selling Price" type="Panel" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content"]
+margin_right = 264.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 0, 27 )
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 7 )
+
+[node name="sell" type="Label" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content/Selling Price"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.34375, 0.0926514, 0.0926514, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "return: $40.00"
+align = 1
+valign = 1
+
+[node name="Panel" type="Panel" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content"]
+margin_top = 31.0
+margin_right = 264.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 31 )
+
+[node name="TextureRect" type="TextureRect" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content/Panel"]
+margin_right = 180.0
+script = ExtResource( 10 )
+
+[node name="Viewport" type="Viewport" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content/Panel"]
+size = Vector2( 450, 450 )
+own_world = true
+world = SubResource( 32 )
+transparent_bg = true
+render_target_v_flip = true
+
+[node name="MiniCoffeeShop" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/Item1/inner/Content/Panel/Viewport" instance=ExtResource( 2 )]
+
+[node name="information" type="HBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList"]
+margin_left = 294.0
+margin_right = 585.0
+margin_bottom = 205.0
+size_flags_horizontal = 3
+
+[node name="panel" type="Panel" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information"]
+margin_right = 291.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 200, 40 )
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 4 )
+
+[node name="container" type="MarginContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 20
+
+[node name="tags" type="VBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 282.0
+margin_bottom = 185.0
+
+[node name="name" type="Label" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_right = 267.0
+margin_bottom = 19.0
+size_flags_horizontal = 5
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Photo one"
+uppercase = true
+
+[node name="cost" type="Label" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_top = 23.0
+margin_right = 267.0
+margin_bottom = 42.0
+size_flags_horizontal = 5
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Cost: $ 20.00"
+
+[node name="description" type="RichTextLabel" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_top = 46.0
+margin_right = 267.0
+margin_bottom = 126.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+text = "This is an interesting description about the item"
+scroll_active = false
+
+[node name="input" type="HBoxContainer" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags"]
+margin_top = 130.0
+margin_right = 267.0
+margin_bottom = 170.0
+
+[node name="buy" type="Button" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags/input"]
+margin_right = 163.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 6 )
+text = "I want to buy this pls"
+
+[node name="details" type="Panel" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags/input"]
+margin_left = 167.0
+margin_right = 267.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 7 )
+
+[node name="owned" type="Label" parent="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags/input/details"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0.34375, 0.0926514, 0.0926514, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Own: 10"
+align = 1
+valign = 1
+
+[node name="ShopkeeperDialogue" type="Panel" parent="fillSizeFlags/VBoxContainer"]
+margin_top = 304.0
+margin_right = 904.0
+margin_bottom = 474.0
+rect_min_size = Vector2( 0, 170 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 3 )
+
+[node name="inner" type="MarginContainer" parent="fillSizeFlags/VBoxContainer/ShopkeeperDialogue"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="list" type="VBoxContainer" parent="fillSizeFlags/VBoxContainer/ShopkeeperDialogue/inner"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 884.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="name" type="Label" parent="fillSizeFlags/VBoxContainer/ShopkeeperDialogue/inner/list"]
+margin_right = 864.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "NAME"
+
+[node name="message" type="RichTextLabel" parent="fillSizeFlags/VBoxContainer/ShopkeeperDialogue/inner/list"]
+margin_top = 38.0
+margin_right = 864.0
+margin_bottom = 103.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 10 )
+bbcode_enabled = true
+bbcode_text = "Welcome Player. It is time to du-du-dudu-dudu-duel
+"
+text = "Welcome Player. It is time to du-du-dudu-dudu-duel
+"
+
+[node name="continue" type="Label" parent="fillSizeFlags/VBoxContainer/ShopkeeperDialogue/inner/list"]
+margin_top = 126.0
+margin_right = 864.0
+margin_bottom = 149.0
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "[space_bar] >"
+align = 2
+
+[node name="Tween" type="Tween" parent="fillSizeFlags/VBoxContainer/ShopkeeperDialogue"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fillSizeFlags/VBoxContainer/ShopkeeperDialogue"]
+root_node = NodePath("../Tween")
+autoplay = "IDEL"
+anims/IDEL = SubResource( 12 )
+anims/RESET = SubResource( 13 )
+
+[connection signal="pressed" from="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/TopHbox/Finished" to="." method="_on_Finished_pressed"]
+[connection signal="pressed" from="fillSizeFlags/VBoxContainer/marginBottomAndFillOnly/ShopPanel/outerMargin/innerVbox/ContentMargin/SeparateMargin/Body/ScrollContainer/ItemList/information/panel/container/tags/input/buy" to="." method="_on_buy_pressed"]
